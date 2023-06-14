@@ -6,12 +6,11 @@ export GIT_SSL_NO_VERIFY=true
 
 MONGODB_DUMP_FILE_NAME=$1
 
-MONGODB_DUMP_FOLDER="cam-archive-repo"
 if [ ! -d "$MONGODB_DUMP_FOLDER/.git" ]; then
     echo "Cloning repository to $MONGODB_DUMP_FOLDER..."
     git clone $MONGODB_DUMP_CLOUD_LOCATION $MONGODB_DUMP_FOLDER
-    git config user.email "mongosync@radiolabs.com"
-    git config user.name "Mongo Sync"
+    git config user.email ${GIT_CONFIG_USER_EMAIL:-"mongo@sync.com"}
+    git config user.name ${GIT_CONFIG_USER_NAME:"Mongo Sync"}
 fi
 
 cd $MONGODB_DUMP_FOLDER
