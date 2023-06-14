@@ -1,5 +1,6 @@
-node_modules/
 .env
 sample.env
+node_modules/
 dumps/
+cam-archive-repo/
 .gitlab-ci.yml

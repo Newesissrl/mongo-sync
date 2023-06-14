@@ -1,8 +1,11 @@
 require("dotenv").config();
+const { spawn } = require("node:child_process");
+
 const { MongoClient } = require("mongodb");
 const fs = require("fs");
 const path = require("path");
-const { MONGODB_DUMP_PATH } = process.env;
+const { MONGODB_DUMP_CLOUD_LOCATION } = process.env;
+const MONGODB_DUMP_PATH = process.env.MONGODB_DUMP_PATH || "dumps";
 const MONGODB_SOURCE_DATABASE = process.env.MONGODB_SOURCE_DATABASE || "app";
 const MONGODB_DEST_DATABASE =
   process.env.MONGODB_DEST_DATABASE || MONGODB_SOURCE_DATABASE;
@@ -13,6 +16,8 @@ const MONGODB_URI =
   "mongodb://localhost?readPreference=primary&replicaSet=rs0&ssl=false";
 const client = new MongoClient(MONGODB_URI);
 console.log(`DEBUG: ${DEBUG}`);
+console.log(`MONGODB_DUMP_HOURS: ${MONGODB_DUMP_HOURS}`);
+
 const dateDumped = [];
 function getCollectionSuffixByDate(dt) {
   return `${dt.getFullYear()}${String(dt.getMonth() + 1).padStart(
@@ -59,9 +64,36 @@ async function startDumpProcess(destDatabase, mongoTools) {
       collection: yesterdayCollectionName,
     });
     if (DEBUG) {
-      console.log(`Dump done: ${result}`);
-      dateDumped.push(yesterdayCollectionSuffix);
+      console.log(`Dump done: ${result.message}`);
     }
+    dateDumped.push(yesterdayCollectionSuffix);
+    if (!MONGODB_DUMP_CLOUD_LOCATION) {
+      console.error(
+        "No 'MONGODB_DUMP_CLOUD_LOCATION' key have been provided. Skipping."
+      );
+      return;
+    }
+    if (DEBUG) {
+      console.log(`Executing ./git-sync.sh ${fileName}`);
+    }
+    const gitSync = spawn("./git-sync.sh", [fileName]);
+    gitSync.stdout.on("data", (data) => {
+      console.log(data.toString());
+    });
+
+    gitSync.stderr.on("data", (data) => {
+      console.log(data.toString());
+    });
+    gitSync.on("close", (code) => {
+      if (code === 0) {
+        destDatabase.dropCollection(yesterdayCollectionName);
+        if (DEBUG) {
+          console.log(
+            `Dropped yesterday collection: ${yesterdayCollectionName}`
+          );
+        }
+      }
+    });
   } catch (e) {
     console.error(e);
   }
@@ -80,19 +112,17 @@ async function main() {
 
   const destDatabase = client.db(MONGODB_DEST_DATABASE);
 
-  // open a Change Stream on the collection
   changeStream = sourceCollection.watch({ fullDocument: "updateLookup" });
   console.log(
     `Waiting for changes on "${sourceDatabase.databaseName}.${sourceCollection.collectionName}"`
   );
 
-  // set up a listener when change events are emitted
   changeStream.on("change", async (next) => {
     const { fullDocument, operationType } = next;
     if (DEBUG) {
       console.log(
         `Received operationType: "${operationType}" ${
-          fullDocument._id ? `for _id: "${fullDocument._id}"` : ""
+          fullDocument ? `for _id: "${fullDocument._id}"` : ""
         }`
       );
     }
