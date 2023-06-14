@@ -1,6 +1,7 @@
 FROM node:20-alpine as base
 
 RUN apk update && \
+    apk add mongodb-tools && \
     rm -rf /var/cache/apk/*
 
 FROM base as packages
