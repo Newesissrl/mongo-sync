@@ -1,0 +1,16 @@
+{
+  "name": "mongo-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.22"
+  }
+}
