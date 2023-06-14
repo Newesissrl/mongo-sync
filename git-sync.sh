@@ -6,6 +6,7 @@ export GIT_SSL_NO_VERIFY=true
 
 MONGODB_DUMP_FILE_NAME=$1
 
+MONGODB_DUMP_FOLDER=${MONGODB_SOURCE_COLLECTION}-archive-repo
 if [ ! -d "$MONGODB_DUMP_FOLDER/.git" ]; then
     echo "Cloning repository to $MONGODB_DUMP_FOLDER..."
     git clone $MONGODB_DUMP_CLOUD_LOCATION $MONGODB_DUMP_FOLDER

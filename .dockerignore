@@ -2,5 +2,5 @@
 sample.env
 node_modules/
 dumps/
-cam-archive-repo/
+*-archive-repo/
 .gitlab-ci.yml
