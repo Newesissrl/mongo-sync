@@ -12,6 +12,6 @@
     "dotenv": "^16.0.3",
     "mongoose": "^6.10.0",
     "node-mongotools": "^2.1.4",
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.1"
   }
 }
