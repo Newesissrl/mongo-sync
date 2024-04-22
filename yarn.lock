@@ -84,6 +84,13 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
+cross-fetch@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.0.0.tgz#f037aef1580bb3a1a35164ea2a848ba81b445983"
+  integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
+  dependencies:
+    node-fetch "^2.6.12"
+
 dateformat@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-5.0.3.tgz#fe2223eff3cc70ce716931cb3038b59a9280696e"
@@ -100,6 +107,13 @@ dotenv@^16.0.3:
   version "16.4.5"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+
+dropbox-refresh-token@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/dropbox-refresh-token/-/dropbox-refresh-token-0.0.3.tgz#97b5693e7422d9b61f9d3593787d06d3a4225bad"
+  integrity sha512-+NSFjRiz43XqnRfOtR3rAo/3PjAzw9nJtcXdgGnsQXo597Kc0eQQ/j2ZU8iq19rSqb5XnMXAMab3kciNgAF4SQ==
+  dependencies:
+    cross-fetch "^4.0.0"
 
 dropbox@^10.34.0:
   version "10.34.0"
@@ -237,7 +251,7 @@ ms@2.1.3:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-node-fetch@^2.6.1:
+node-fetch@^2.6.1, node-fetch@^2.6.12:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
   integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
@@ -245,12 +259,13 @@ node-fetch@^2.6.1:
     whatwg-url "^5.0.0"
 
 node-mongotools@^2.1.4:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.1.tgz#8c7b3e2f59af67828924148fef4af189b0c1a578"
-  integrity sha512-U6G7fslWUl8PdiszWeHaULmwzsRQbNSXsxQI5NS6wPoomJyWIRk6z2nuG1pV1bTcvNCWafDZpGTd1zt2yR8O1w==
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.5.tgz#c11f0d9c25ff4f519e9aef3758f778c602552868"
+  integrity sha512-+NB6SOQ74d4lvePsHXEB44pFVnqxG7qhpg4D91QwxyrKiodLcSfefrGGx6EbG3O6dtnpy4VoAPXjRTkQfcI7TQ==
   dependencies:
     dateformat "^5.0.3"
     dropbox "^10.34.0"
+    dropbox-refresh-token "^0.0.3"
 
 nodemon@^3.0.1:
   version "3.1.0"
