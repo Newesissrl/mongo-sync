@@ -217,9 +217,9 @@ mongodb@6.8.0:
     mongodb-connection-string-url "^3.0.0"
 
 mongoose@^8.0.1:
-  version "8.6.0"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.6.0.tgz#52a7cc6026c4d49cd14e4a40e6601c44b1186e49"
-  integrity sha512-p6VSbYKvD4ZIabqo8C0kS5eKX1Xpji+opTAIJ9wyuPJ8Y/FblgXSMnFRXnB40bYZLKPQT089K5KU8+bqIXtFdw==
+  version "8.6.4"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.6.4.tgz#41aeabf2d3e329bbbc2b6c83de75e08155cb53fc"
+  integrity sha512-trOj6bHS3egVlKlCbQRsnMokaHFDRyQOvwA5wfl/pJx4j4EO5BAESavLf93NOTMpuo4T90/+V8CBk+sH3Ltr3g==
   dependencies:
     bson "^6.7.0"
     kareem "2.6.3"
@@ -268,9 +268,9 @@ node-mongotools@^2.1.4:
     dropbox-refresh-token "^0.0.3"
 
 nodemon@^3.0.1:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.4.tgz#c34dcd8eb46a05723ccde60cbdd25addcc8725e4"
-  integrity sha512-wjPBbFhtpJwmIeY2yP7QF+UKzPfltVGtfce1g/bB15/8vCGZj8uxD62b/b9M9/WVgme0NZudpownKN+c0plXlQ==
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.7.tgz#07cb1f455f8bece6a499e0d72b5e029485521a54"
+  integrity sha512-hLj7fuMow6f0lbB0cD14Lz2xNjwsyruH251Pk4t/yIitCFJbmY1myuLlHm/q06aST4jg6EgAh74PIBBrRqpVAQ==
   dependencies:
     chokidar "^3.5.2"
     debug "^4"
