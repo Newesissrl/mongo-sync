@@ -400,9 +400,9 @@ mongodb@~6.18.0:
     mongodb-connection-string-url "^3.0.0"
 
 mongoose@^8.0.1:
-  version "8.18.1"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.18.1.tgz#46118754e6dba688352fdefaaaac90308788920e"
-  integrity sha512-K0RfrUXXufqNRZZjvAGdyjydB91SnbWxlwFYi5t7zN2DxVWFD3c6puia0/7xfBwZm6RCpYOVdYFlRFpoDWiC+w==
+  version "8.18.2"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-8.18.2.tgz#40e928030f10a506645ee770d878a2a3994a0f79"
+  integrity sha512-gA6GFlshOHUdNyw9OQTmMLSGzVOPbcbjaSZ1dvR5iMp668N2UUznTuzgTY6V6Q41VtBc4kmL/qqML1RNgXB5Fg==
   dependencies:
     bson "^6.10.4"
     kareem "2.6.3"
@@ -447,9 +447,9 @@ node-fetch@^2.6.1, node-fetch@^2.6.12:
     whatwg-url "^5.0.0"
 
 node-mongotools@^2.1.4:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.8.tgz#8d534854bb4ba8063de224683abc1e9c6f81732f"
-  integrity sha512-/QrIMEMmjo64dGyYO87rHY95Z1gv/THnxTtPgSmHdrXJqxq6gSd8sganlgpr7/mAfQUuWv16iz5nOKyE3RrYMw==
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.10.tgz#92a8a2d5b23b80ecd101537541efbb75922614a2"
+  integrity sha512-MLuX6m05Zor44L4iB8jfvnvN7l7/xQ6NQB5QpOiohd4j1XCdg4+DpUzfvSzOwztAn+Sf/qXIDbWr+ptZOuZHHg==
   dependencies:
     dateformat "^5.0.3"
     dropbox "^10.34.0"
