@@ -447,9 +447,9 @@ node-fetch@^2.6.1, node-fetch@^2.6.12:
     whatwg-url "^5.0.0"
 
 node-mongotools@^2.1.4:
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.11.tgz#d45c766cfea2d956fe1a67fb782b36516063f1bf"
-  integrity sha512-2xN0vncCzzUPiuDQGxIFRAJnT4SkA2l9loFAsN8MxHMC6Er8WfLXiBQKUQRGRWUr6TF59Hiaf3+IG8p/U1C6kA==
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/node-mongotools/-/node-mongotools-2.2.12.tgz#5d2730190c50d111fab686589dc0319f117cb6c1"
+  integrity sha512-pY7X/6jkML67Fz2WPyfWzCU80OMG0XYvmnDJaHcEXoIWiWEofhi4ZXF5aXiKCqiB1OWsqmvuE2WI1kItVQnbFA==
   dependencies:
     dateformat "^5.0.3"
     dropbox "^10.34.0"
