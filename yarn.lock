@@ -212,9 +212,9 @@ defaults@^1.0.3:
     clone "^1.0.2"
 
 dotenv@^17.2.2:
-  version "17.2.3"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.2.3.tgz#ad995d6997f639b11065f419a22fabf567cdb9a2"
-  integrity sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==
+  version "17.2.4"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.2.4.tgz#b5a0e2f015e0be287a5330a90bf0e804606504c2"
+  integrity sha512-mudtfb4zRB4bVvdj0xRo+e6duH1csJRM8IukBqfTRvHotn9+LBXB8ynAidP9zHqoRC/fsllXgk4kCKlR21fIhw==
 
 dropbox-refresh-token@^0.0.5:
   version "0.0.5"
@@ -400,9 +400,9 @@ mongodb@~7.0:
     mongodb-connection-string-url "^7.0.0"
 
 mongoose@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-9.0.0.tgz#193bcf978a13852f708d6a29fe9764c1d37ba1b4"
-  integrity sha512-J6wTGC8/hSFpy9K6kPbKDnBNoUcX4iOGCasUrRzlSKdwdVNxdscLA4oHKOQwJlHqh/TxDNg+Uzg6koCyCKP0wA==
+  version "9.1.6"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-9.1.6.tgz#98dca5aca71a6145015b6eed5f386b14094f57f6"
+  integrity sha512-ZrtgRsJKtW3od36TVXtAnrNHOO3rqhsqfVut6IzyWyJeLLeLTqW66qej/0qB37GZd5jL06nHfAceTikkfnSqbA==
   dependencies:
     kareem "3.0.0"
     mongodb "~7.0"
